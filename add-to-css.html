@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head id="head">
+    <title>Example HTML Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #aa80f3;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #aa80f3;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #aa80f3;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #aa80f3;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Welcome to My Website</h2>
+        <p>This is a simple website.</p>
+        <button onclick="toggleCSS()" id="button">Toggle CSS</button>
+    </main>
+    <footer>
+        <p>Copyright © Coding Whiz Academy</p>
+    </footer>
+    <script>
+  let cssEnabled = true;
+  const styleElement = document.querySelector('#head style');
+
+  function toggleCSS() {
+    if (cssEnabled) {
+      styleElement.innerHTML = ''; // Remove the style contents
+      cssEnabled = false;
+    } else {
+      styleElement.innerHTML = `
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #aa80f3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  background-color: #aa80f3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #aa80f3;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: #aa80f3; /* Green */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+      `;
+      cssEnabled = true;
+    }
+  }
+</script>
+</body>
+
+</html>
